@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Personal Messaging Assistant — [YOUR FULL NAME]</title>
+<meta name="description" content="A personal text-message assistant for calendar and assignment reminders, operated by [YOUR FULL NAME] for a single authorized user.">
+<style>
+  :root {
+    --bg: #ffffff;
+    --ink: #1f2933;
+    --muted: #52606d;
+    --rule: #d9e0e6;
+    --accent: #0f6b6b;
+    --note-bg: #eef5f5;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #12171b;
+      --ink: #e6eaed;
+      --muted: #a3afba;
+      --rule: #2b353d;
+      --accent: #5fc4c0;
+      --note-bg: #19262a;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #12171b;
+    --ink: #e6eaed;
+    --muted: #a3afba;
+    --rule: #2b353d;
+    --accent: #5fc4c0;
+    --note-bg: #19262a;
+  }
+
+  * { box-sizing: border-box; }
+  html { scroll-padding-top: 1.5rem; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font: 1.0625rem/1.65 Charter, "Iowan Old Style", Georgia, "Times New Roman", serif;
+  }
+  main { max-width: 40rem; margin: 0 auto; padding: 3.5rem 1.5rem 4rem; }
+
+  h1, h2, nav, .note strong, footer {
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  }
+  h1 { font-size: 2rem; line-height: 1.2; margin: 0 0 0.75rem; letter-spacing: -0.01em; }
+  h2 { font-size: 1.25rem; line-height: 1.3; margin: 3rem 0 0.75rem; padding-top: 1.5rem; border-top: 1px solid var(--rule); }
+  p { margin: 0 0 1rem; }
+  ul { margin: 0 0 1rem; padding-left: 1.25rem; }
+  li { margin-bottom: 0.4rem; }
+  a { color: var(--accent); text-underline-offset: 0.15em; }
+  a:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; border-radius: 2px; }
+
+  .lede { font-size: 1.15rem; color: var(--muted); margin-bottom: 1.5rem; }
+  nav { font-size: 0.95rem; display: flex; flex-wrap: wrap; gap: 0.25rem 1.25rem; margin-bottom: 2.5rem; }
+  .note { background: var(--note-bg); border-left: 4px solid var(--accent); padding: 1rem 1.25rem; margin: 1.5rem 0; }
+  .note p:last-child { margin-bottom: 0; }
+  dl { margin: 0 0 1rem; }
+  dt { font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif; font-weight: 600; margin-top: 0.9rem; }
+  dd { margin: 0.15rem 0 0; }
+  footer { margin-top: 3.5rem; padding-top: 1.5rem; border-top: 1px solid var(--rule); font-size: 0.9rem; color: var(--muted); }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <h1>Personal Messaging Assistant</h1>
+    <p class="lede">A private text-message assistant that keeps one person's calendar and assignments on track. Operated by [YOUR FULL NAME].</p>
+    <nav aria-label="Page sections">
+      <a href="#about">About</a>
+      <a href="#consent">Consent</a>
+      <a href="#messages">Messages</a>
+      <a href="#opt-out">Opt out</a>
+      <a href="#privacy">Privacy policy</a>
+      <a href="#terms">Terms</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section id="about">
+    <h2>About this service</h2>
+    <p>This is a personal project, not a commercial or public service. It is a text-message assistant that helps its owner manage a Google Calendar and keep track of school assignments: due dates, estimated work time, and reminders.</p>
+    <p>The owner texts the assistant in plain language (for example, "essay due Friday, about four hours"), and the assistant replies by text, adds or updates calendar events, and sends reminders.</p>
+    <div class="note">
+      <p><strong>Single authorized recipient.</strong> The assistant only communicates with one phone number, belonging to its owner, [YOUR FULL NAME]. It does not send messages to customers, the public, or any list of contacts, and it ignores texts from every other number.</p>
+    </div>
+  </section>
+
+  <section id="consent">
+    <h2>How consent works</h2>
+    <p>The owner is the only user and has agreed to receive these messages. Every conversation starts when the owner texts the assistant's number first. Reminders are sent only for events and assignments the owner has chosen to add. No one can be enrolled by a third party, and there is no sign-up form, no purchased or shared contact list, and no marketing audience.</p>
+  </section>
+
+  <section id="messages">
+    <h2>Message types and frequency</h2>
+    <p>Messages are limited to:</p>
+    <ul>
+      <li>Replies to texts the owner sends, such as confirming a new assignment or listing what is due this week.</li>
+      <li>A short morning summary of the day's calendar.</li>
+      <li>Reminders for upcoming events and assignment work sessions.</li>
+      <li>Check-ins asking whether a work session was finished.</li>
+    </ul>
+    <p>Example messages:</p>
+    <ul>
+      <li>"Added: Gatsby essay, due Friday, 4 hours. Heads up, that week is tight."</li>
+      <li>"Reminder: dentist appointment at 3:00 PM."</li>
+      <li>"Your work session on the lab report just ended. Did you finish?"</li>
+    </ul>
+    <p>Message frequency varies with the owner's schedule and is typically a few messages per day. Message and data rates may apply. No promotional or marketing messages are ever sent.</p>
+  </section>
+
+  <section id="opt-out">
+    <h2>Opt out and help</h2>
+    <p>Reply <strong>STOP</strong> to any message to stop all messages. Reply <strong>HELP</strong> for help, or use the contact details below. Messaging resumes only if the owner texts the number again and asks to restart.</p>
+  </section>
+
+  <section id="privacy">
+    <h2>Privacy policy</h2>
+    <dl>
+      <dt>What is collected</dt>
+      <dd>The owner's mobile phone number, the content of text messages sent to and from the assistant, and the calendar events and assignment details the owner asks it to manage.</dd>
+      <dt>How it is used</dt>
+      <dd>Only to run the assistant: reading messages, updating the calendar, tracking assignments, and sending replies and reminders. It is not used for advertising or profiling.</dd>
+      <dt>Service providers</dt>
+      <dd>To operate, messages pass through a small number of providers acting on the owner's behalf: Twilio delivers text messages, Anthropic's language model interprets messages and writes replies, and Google hosts the calendar and the spreadsheet where assignments and recent conversation history are stored. Each handles data under its own terms and privacy policy.</dd>
+      <dt>No sharing for marketing</dt>
+      <dd>No mobile information is shared with third parties or affiliates for marketing or promotional purposes. Text messaging opt-in data and consent are not shared with any third party.</dd>
+      <dt>Retention and deletion</dt>
+      <dd>Recent conversation history is kept so the assistant can follow context, and older messages are periodically deleted. The owner can ask for any stored data to be deleted at any time using the contact details below.</dd>
+    </dl>
+  </section>
+
+  <section id="terms">
+    <h2>Terms of use</h2>
+    <ul>
+      <li>This service is for personal use by its owner only and is not offered to the public.</li>
+      <li>It is provided as is, without warranties. Replies, reminders, and scheduling suggestions can be wrong or delayed, so important deadlines should be double-checked.</li>
+      <li>Message and data rates from the owner's mobile carrier may apply. Carriers are not liable for delayed or undelivered messages.</li>
+      <li>The owner can stop messages at any time by replying STOP.</li>
+    </ul>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Questions, help, or data deletion requests: <a href="mailto:[YOUR EMAIL]">[YOUR EMAIL]</a></p>
+    <p>Operator: [YOUR FULL NAME]</p>
+  </section>
+
+  <footer>
+    <p>Last updated October 4, 2026.</p>
+  </footer>
+</main>
+</body>
+</html>
